@@ -1,35 +1,54 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": {
-      "text": "Top 10 Daimyo",
-      "frame": "bounds"
-    },
-    "data": {
-
-        "url": "E:\Monash\FIT3179\FIT3179ForW10\W10\data\kokudaka_of_japan.csv"
-    },
-    "transform": [{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+  "text": "Stone High",
+  "frame": "bounds"
+},
+"data": {
+  "values": [
+      {"Name": "德川家康", "period": "before", "point": 256},
+      {"Name": "毛利辉元", "period": "before", "point": 121},
+      {"Name": "上杉景胜", "period": "before", "point": 120},
+      {"Name": "前田利长", "period": "before", "point": 84},
+      {"Name": "岛津义弘", "period": "before", "point": 60},
+      {"Name": "伊达政宗", "period": "before", "point": 59},
+      {"Name": "宇喜多秀家", "period": "before", "point": 57},
+      {"Name": "佐竹义宣", "period": "before", "point": 54},
+      {"Name": "小早川秀秋", "period": "before", "point": 36},
+      {"Name": "德川家康", "period": "after", "point": 400},
+      {"Name": "毛利辉元", "period":"after", "point": 37},
+      {"Name": "上杉景胜", "period": "after", "point": 30},
+      {"Name": "前田利长", "period": "after", "point": 119},
+      {"Name": "岛津义弘", "period": "after", "point": 0},
+      {"Name": "伊达政宗", "period": "after", "point": 62},
+      {"Name": "宇喜多秀家", "period": "after", "point": 0},
+      {"Name": "佐竹义宣", "period": "after", "point": 20},
+      {"Name": "小早川秀秋", "period": "after", "point": 51}
+  ]
+},
+"transform": [{
       "sort": [
-        {"field": "kokudaka", "order": "descending"}
+          {"field": "point", "order": "descending"}
 
-      ],
-      "window": [{
-        "op": "rank",
-        "as": "rank"
-      }],
-      "groupby": ["period"]
-    }],
-    "mark": {"type": "line", "orient": "vertical"},
-    "encoding": {
-      "x": {"field": "period", "type": "ordinal"},
-      "y": {"field": "rank", "type": "ordinal"},
-      "color": {
-        "field": "Name", "type": "nominal",
-        "scale": {
-          "domain": ["德川家康", "毛利辉元", "上杉景胜", "前田利长", "岛津义弘", "伊达政宗", "宇喜多秀家" , "佐竹义宣", "小早川秀秋"
-          ],
-          "range": ["black", "#127153", "#C91A3C", "#0C71AB","red","brown", "blue", "pink","orange"]
-        }
-      }
-    }
+  ],
+"window": [{
+  "op": "rank",
+  "as": "rank"
+  }],
+"groupby": ["period"]
+}],
+"mark": {"type": "line", "orient": "vertical"},
+"encoding": {
+  "x": {"field": "period", "type": "ordinal"},
+  "y": {"field": "rank", "type": "ordinal"},
+"color": {
+"field": "Name", "type": "nominal",
+"scale": {
+    "domain": ["德川家康", "毛利辉元", "上杉景胜", "前田利长", "岛津义弘", "伊达政宗", "宇喜多秀家" , "佐竹义宣", "小早川秀秋"],
+    "range": ["black", "#127153", "#C91A3C", "#0C71AB","red","brown", "blue", "pink","orange"]
   }
+  }
+},
+
+"config": {}
+}
