@@ -1,4 +1,4 @@
-﻿Name,Troops,Belong,Attribute
+﻿Name,Troops ,Belong,Attribute
 Ishida Mitsunari,5800,West,Leader
 Mouri Hidemoto,15000,West,General
 Tokugawa Ieyasu,30000,East,Leader
@@ -7,10 +7,5 @@ Konishi Yukinaga,4000,West,General
 Kobayakawa Hideaki,15000,West,General
 Chousogabe Morichika,6600,West,General
 Otani Yoshitsugu,1500,West,General
-Other,9500,West,General
 Asano Yosinaga,6500,East,General
-Kuroda Nagamasa,"5,400",East,General
-Tosokawa Tadaoki,5000,East,General
-Ikeda Terumasa,"4,500",East,General
 Hukusima Masanori,6000,East,General
-Other-East,"39,400",West,General
