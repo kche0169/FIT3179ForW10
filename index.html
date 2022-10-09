@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.22.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.2.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.20.8"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+    <title>FIT3179 Data Visualisation Week 10 Homework kche0169</title>
+</head>
+<body>
+  <h1>The first Map</h1>
+  <div id="symbol_map"></div>
+  <h1>The second interactive vis</h1>
+  <div id="me"></div>
+  <h1>The third vis</h1>
+  <div id="me3"></div>
+
+  <script type="text/javascript">
+    
+    var spec2 = "js/vis_2.vg.json";
+    
+    var spec1 = "js/test2.json";
+    var spec4 = "js/BarChartTwo.vg.json";
+    
+    vegaEmbed('#symbol_map', spec2).then(function(result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+    vegaEmbed('#me', spec1).then(function(result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+    
+    vegaEmbed('#me3', spec4).then(function(result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+  </script>
+  </script>
+</body>
+</html>
